@@ -42,7 +42,7 @@ const getListProducts = async (url, typeUrl, textFilter) => {
       price = e.price;
     }
 
-    if(name === textFilter || type === textFilter || textFilter === ''){
+    if(name === textFilter || type === textFilter || textFilter === '' || name.includes(textFilter) || type.includes(textFilter)){
       listProducts = listProducts + `
       <div class="col-xl-3 col-md-6 mb-xl-0 mb-4 mt-4">
         <div class="card card-blog card-plain">
